@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oraciones Iniciales - Santo Rosario</title>
+  <title>Oraciones Iniciales y Misterios</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +11,107 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    .mystery-card-wrap{
+      text-align: center;
+    }
+
+    .mystery-day-outside{
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffd27a;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .mystery-card{
+      position: relative;
+      display: block;
+      height: 320px;
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 15px 40px rgba(0,0,0,.4);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .mystery-card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0,0,0,.5);
+    }
+
+    .mystery-bg{
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform .5s ease;
+    }
+
+    .mystery-card:hover .mystery-bg{
+      transform: scale(1.06);
+    }
+
+    .mystery-overlay{
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.84), rgba(0,0,0,.22));
+    }
+
+    .mystery-content{
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      text-align: left;
+      z-index: 2;
+    }
+
+    .mystery-tag{
+      display: inline-block;
+      font-size: 13px;
+      color: #ffd27a;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: .5px;
+    }
+
+    .mystery-content h3{
+      font-family: "Marcellus", serif;
+      font-size: 28px;
+      margin: 4px 0 8px;
+      color: white;
+      line-height: 1.1;
+    }
+
+    .mystery-content p{
+      font-size: 14px;
+      margin: 0;
+      color: #f2f4f8;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px){
+      .mystery-card{
+        height: 290px;
+      }
+
+      .mystery-content h3{
+        font-size: 24px;
+      }
+
+      .mystery-content p{
+        font-size: 13px;
+      }
+
+      .mystery-day-outside{
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
 <body class="page-prayers">
 
@@ -46,19 +147,19 @@
         <div class="prayer-card">
           <h3 class="prayer-title">Acto de Contrición</h3>
           <p class="prayer-text">
-            Señor mío Jesucristo, Dios y Hombre verdadero, Creador, Padre y Redentor mío; por ser vos 
-            quien sois, bondad infinita, y porque os amo sobre todas las cosas, me pesa de todo corazón
-             haberos ofendido; también me pesa porque podéis castigarme con las penas del infierno. 
-             Ayudado de vuestra divina gracia, propongo firmemente nunca más pecar, confesarme y cumplir 
-             la penitencia que me fuere impuesta. Amén.
+            Señor mío Jesucristo, Dios y Hombre verdadero, me arrepiento de haberte ofendido,
+            porque he merecido el infierno y he perdido el cielo, sobre todo porque te ofendí a Ti
+            que eres infinitamente bueno. Padeciste y moriste por mí en la cruz, te amo con todo mi
+            corazón y propongo con tu gracia nunca volver a pecar. Amén.
           </p>
         </div>
 
         <div class="prayer-card">
-          <h3 class="prayer-title">Peticiones del Santo Rosario</h3>
+          <h3 class="prayer-title">Indicación para continuar</h3>
           <p class="prayer-text">
-            Pidamos por la familia, la paz del mundo, los sacerdotes por nuestra salud 
-            y por todo lo que el Señor sabe que nos hace falta y no sabemos pedir
+            Después del Acto de Contrición, se reza el primer misterio correspondiente al día,
+            un Padre Nuestro y diez Ave María, finalmente las jaculatorias. Así sucesivamente
+            hasta terminar los cinco misterios.
           </p>
         </div>
 
@@ -68,52 +169,68 @@
 
         <div class="row g-4">
 
+          <!-- GOZOSOS -->
           <div class="col-md-6 col-xl-3">
-            <a href="gozosos.html" class="mystery-card">
-              <div class="mystery-bg" style="background-image: url('../img/fondo-gozosos.jpg');"></div>
-              <div class="mystery-overlay"></div>
-              <div class="mystery-content">
-                <span class="mystery-tag">Rosario</span>
-                <h3>Misterios Gozosos</h3>
-                <p>La alegría de la Encarnación y la infancia de Jesús.</p>
-              </div>
-            </a>
+            <div class="mystery-card-wrap">
+              <div class="mystery-day-outside">Lunes • Sábados</div>
+              <a href="gozosos.html" class="mystery-card">
+                <div class="mystery-bg" style="background-image:url('../img/fondo-gozosos.jpg')"></div>
+                <div class="mystery-overlay"></div>
+                <div class="mystery-content">
+                  <span class="mystery-tag">Rosario</span>
+                  <h3>Misterios Gozosos</h3>
+                  <p>La alegría de la Encarnación y la infancia de Jesús.</p>
+                </div>
+              </a>
+            </div>
           </div>
 
+          <!-- DOLOROSOS -->
           <div class="col-md-6 col-xl-3">
-            <a href="dolorosos.html" class="mystery-card">
-              <div class="mystery-bg" style="background-image: url('../img/fondo-dolorosos.jpg');"></div>
-              <div class="mystery-overlay"></div>
-              <div class="mystery-content">
-                <span class="mystery-tag">Rosario</span>
-                <h3>Misterios Dolorosos</h3>
-                <p>La pasión y el sacrificio redentor de Nuestro Señor.</p>
-              </div>
-            </a>
+            <div class="mystery-card-wrap">
+              <div class="mystery-day-outside">Martes • Viernes</div>
+              <a href="dolorosos.html" class="mystery-card">
+                <div class="mystery-bg" style="background-image:url('../img/fondo-dolorosos.jpg')"></div>
+                <div class="mystery-overlay"></div>
+                <div class="mystery-content">
+                  <span class="mystery-tag">Rosario</span>
+                  <h3>Misterios Dolorosos</h3>
+                  <p>La pasión y el sacrificio redentor de Nuestro Señor.</p>
+                </div>
+              </a>
+            </div>
           </div>
 
+          <!-- LUMINOSOS -->
           <div class="col-md-6 col-xl-3">
-            <a href="luminosos.html" class="mystery-card">
-              <div class="mystery-bg" style="background-image: url('../img/fondo-luminosos.jpg');"></div>
-              <div class="mystery-overlay"></div>
-              <div class="mystery-content">
-                <span class="mystery-tag">Rosario</span>
-                <h3>Misterios Luminosos</h3>
-                <p>La vida pública de Jesús y la luz de su misión.</p>
-              </div>
-            </a>
+            <div class="mystery-card-wrap">
+              <div class="mystery-day-outside">Jueves</div>
+              <a href="luminosos.html" class="mystery-card">
+                <div class="mystery-bg" style="background-image:url('../img/fondo-luminosos.jpg')"></div>
+                <div class="mystery-overlay"></div>
+                <div class="mystery-content">
+                  <span class="mystery-tag">Rosario</span>
+                  <h3>Misterios Luminosos</h3>
+                  <p>La vida pública de Jesús y la luz de su misión.</p>
+                </div>
+              </a>
+            </div>
           </div>
 
+          <!-- GLORIOSOS -->
           <div class="col-md-6 col-xl-3">
-            <a href="gloriosos.html" class="mystery-card">
-              <div class="mystery-bg" style="background-image: url('../img/fondo-gloriosos.jpg');"></div>
-              <div class="mystery-overlay"></div>
-              <div class="mystery-content">
-                <span class="mystery-tag">Rosario</span>
-                <h3>Misterios Gloriosos</h3>
-                <p>La Resurrección, la gloria de María y la esperanza eterna.</p>
-              </div>
-            </a>
+            <div class="mystery-card-wrap">
+              <div class="mystery-day-outside">Miércoles • Domingo</div>
+              <a href="gloriosos.html" class="mystery-card">
+                <div class="mystery-bg" style="background-image:url('../img/fondo-gloriosos.jpg')"></div>
+                <div class="mystery-overlay"></div>
+                <div class="mystery-content">
+                  <span class="mystery-tag">Rosario</span>
+                  <h3>Misterios Gloriosos</h3>
+                  <p>La Resurrección, la gloria de María y la esperanza eterna.</p>
+                </div>
+              </a>
+            </div>
           </div>
 
         </div>
