@@ -1,0 +1,467 @@
+:root{
+  --gold: #d9b36a;
+  --gold-soft: #f4d79a;
+  --navy-1: #081321;
+  --navy-2: #10243d;
+  --navy-3: #1d3557;
+  --white: #ffffff;
+  --soft-white: #edf3fb;
+  --text-soft: #d9e4f2;
+  --shadow: 0 20px 50px rgba(0,0,0,.32);
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  background-color: var(--navy-1);
+}
+
+.page-home{
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8, 19, 33, 0.72), rgba(8, 19, 33, 0.86)),
+    url("../img/fondo-principal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-wrapper{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.welcome-box{
+  background: rgba(10, 23, 40, .42);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: 38px 28px;
+  box-shadow: var(--shadow);
+}
+
+.small-label{
+  color: var(--gold-soft);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.main-title{
+  font-family: "Marcellus", serif;
+  font-size: clamp(2.3rem, 5vw, 5rem);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.main-subtitle{
+  color: var(--text-soft);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  margin-bottom: 0;
+}
+
+.quote-box{
+  max-width: 1050px;
+  margin: 28px auto 30px auto;
+  background: rgba(255,255,255,.07);
+  border-left: 5px solid var(--gold);
+  border-radius: 18px;
+  padding: 24px 24px 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.20);
+}
+
+.quote-text{
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: var(--soft-white);
+  font-style: italic;
+}
+
+.quote-author{
+  margin: 14px 0 0 0;
+  text-align: right;
+  color: var(--gold-soft);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.btn-gold{
+  background: var(--gold);
+  color: #13243a;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-gold:hover{
+  background: #e5c482;
+  color: #102136;
+}
+
+.page-prayers{
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8, 19, 33, 0.76), rgba(8, 19, 33, 0.90)),
+    url("../img/fondo-principal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.prayers-wrapper{
+  min-height: 100vh;
+  padding: 32px 0 40px;
+}
+
+.prayer-shell{
+  background: rgba(10, 23, 40, .42);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.top-actions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.back-link{
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+
+.hero-head{
+  text-align: center;
+}
+
+.hero-title{
+  font-family: "Marcellus", serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 10px;
+}
+
+.hero-title-sm{
+  font-family: "Marcellus", serif;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  margin-bottom: 0;
+}
+
+.hero-subtitle{
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.prayer-card{
+  background: linear-gradient(180deg, rgba(32, 50, 76, .96), rgba(25, 39, 60, .97));
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 18px;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 12px 30px rgba(0,0,0,.22);
+}
+
+.prayer-title{
+  font-family: "Marcellus", serif;
+  font-size: 1.7rem;
+  margin-bottom: 14px;
+  color: var(--gold-soft);
+}
+
+.prayer-text{
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: var(--soft-white);
+  margin-bottom: 0;
+}
+
+.mystery-card{
+  position: relative;
+  display: block;
+  min-height: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: transform .35s ease, box-shadow .35s ease;
+  isolation: isolate;
+}
+
+.mystery-card:hover{
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 28px 50px rgba(0,0,0,.42);
+}
+
+.mystery-bg{
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  transition: transform .55s ease;
+}
+
+.mystery-card:hover .mystery-bg{
+  transform: scale(1.08);
+}
+
+.mystery-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(4,10,20,.92) 8%, rgba(6,13,25,.35) 55%, rgba(6,13,25,.18) 100%);
+}
+
+.mystery-content{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  z-index: 2;
+}
+
+.mystery-tag{
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--gold-soft);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.mystery-content h3{
+  font-family: "Marcellus", serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.mystery-content p{
+  margin: 0;
+  color: var(--soft-white);
+  font-size: .96rem;
+  line-height: 1.7;
+}
+
+/* páginas de misterios */
+.page-mystery{
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(8, 19, 33, 0.72), rgba(8, 19, 33, 0.88)),
+    var(--mystery-bg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 28px 0 40px;
+}
+
+.mystery-shell{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.hero-panel{
+  background: rgba(10, 23, 40, .42);
+  border: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.progress-wrap{
+  margin: 10px 0 24px;
+}
+
+.progress{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+}
+
+.progress-bar{
+  background: linear-gradient(90deg, var(--gold), var(--gold-soft));
+}
+
+.mystery-display{
+  background: linear-gradient(180deg, rgba(32, 50, 76, .96), rgba(25, 39, 60, .97));
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.badge-counter{
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  color: var(--white);
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.mystery-number{
+  color: var(--gold-soft);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+.mystery-title-main{
+  font-family: "Marcellus", serif;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.mystery-description{
+  font-size: 1.08rem;
+  line-height: 1.95;
+  color: var(--soft-white);
+  margin-bottom: 18px;
+}
+
+.mystery-fruit{
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-soft);
+  margin-bottom: 0;
+}
+
+.control-buttons{
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.control-buttons .btn{
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 600;
+}
+
+.quick-list{
+  margin-top: 24px;
+  background: rgba(255,255,255,.05);
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.quick-list h4{
+  font-family: "Marcellus", serif;
+  margin-bottom: 16px;
+}
+
+.quick-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quick-buttons button{
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.08);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 10px 16px;
+  transition: .25s ease;
+}
+
+.quick-buttons button:hover{
+  background: rgba(255,255,255,.16);
+}
+
+.fade-in{
+  animation: fadeInMove .45s ease;
+}
+
+@keyframes fadeInMove{
+  from{
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* oración final */
+.final-image-wrap{
+  margin-top: 28px;
+  text-align: center;
+}
+
+.final-image{
+  max-width: 320px;
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  border: 3px solid rgba(255,255,255,.12);
+}
+
+@media (max-width: 991px){
+  .mystery-card{
+    min-height: 290px;
+  }
+}
+
+@media (max-width: 768px){
+  .welcome-box,
+  .prayer-shell,
+  .hero-panel,
+  .mystery-display,
+  .quick-list,
+  .prayer-card{
+    padding: 20px;
+  }
+
+  .quote-box{
+    padding: 20px 18px 16px;
+  }
+
+  .quote-text,
+  .prayer-text,
+  .mystery-description{
+    font-size: .98rem;
+    line-height: 1.8;
+  }
+
+  .mystery-content h3{
+    font-size: 1.55rem;
+  }
+
+  .control-buttons .btn,
+  .quick-buttons button{
+    width: 100%;
+  }
+
+  .small-label{
+    font-size: 1.45rem;
+    letter-spacing: 3px;
+  }
+}
