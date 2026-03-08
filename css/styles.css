@@ -465,3 +465,30 @@ body{
     letter-spacing: 3px;
   }
 }
+.rosary-prayers{
+margin-top:18px;
+padding:16px 18px;
+
+background:rgba(255,255,255,0.06);
+
+border-radius:14px;
+
+border-left:4px solid var(--gold);
+}
+
+.rosary-step{
+font-weight:600;
+margin-bottom:6px;
+color:var(--gold-soft);
+}
+
+.rosary-list{
+margin:0;
+padding-left:18px;
+color:var(--soft-white);
+line-height:1.7;
+}
+
+.rosary-list li{
+margin-bottom:4px;
+}
