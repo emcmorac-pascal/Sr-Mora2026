@@ -38,42 +38,47 @@ const rosarioData = {
   },
 
   dolorosos: {
-    tituloGeneral: "Misterios Dolorosos",
-    subtitulo: "Contemplamos la pasión y muerte de Nuestro Señor Jesucristo.",
-    redirectFinal: "letanias.html",
-    misterios: [
-      {
-        numero: "Primer Misterio Doloroso",
-        titulo: "La Oración de Jesús en el Huerto",
-        descripcion: "Contemplamos a Jesús orando en Getsemaní, sufriendo angustia y aceptando la voluntad del Padre.",
-        fruto: "La contrición de los pecados"
-      },
-      {
-        numero: "Segundo Misterio Doloroso",
-        titulo: "La Flagelación del Señor",
-        descripcion: "Contemplamos a Jesús atado a la columna y azotado cruelmente por amor a nosotros.",
-        fruto: "La mortificación de los sentidos"
-      },
-      {
-        numero: "Tercer Misterio Doloroso",
-        titulo: "La Coronación de Espinas",
-        descripcion: "Contemplamos a Jesús humillado, coronado de espinas y burlado como rey.",
-        fruto: "La humildad"
-      },
-      {
-        numero: "Cuarto Misterio Doloroso",
-        titulo: "Jesús con la Cruz a Cuestas",
-        descripcion: "Contemplamos a Jesús cargando la cruz camino al Calvario, por amor a la humanidad.",
-        fruto: "La paciencia en las cruces"
-      },
-      {
-        numero: "Quinto Misterio Doloroso",
-        titulo: "La Crucifixión y Muerte de Jesús",
-        descripcion: "Contemplamos a Jesús muriendo en la cruz para salvarnos del pecado y abrirnos las puertas del cielo.",
-        fruto: "El amor a Jesús y la salvación de las almas"
-      }
-    ]
-  },
+  tituloGeneral: "Misterios Dolorosos",
+  subtitulo: "Contemplamos la pasión y muerte de Nuestro Señor Jesucristo.",
+  redirectFinal: "oraciones-despues-misterios.html",
+  misterios: [
+    {
+      numero: "Primer Misterio Doloroso",
+      titulo: "La Oración de Jesús en el Huerto",
+      descripcion: "Contemplamos a Jesús orando en Getsemaní, sufriendo angustia y aceptando la voluntad del Padre.",
+      fruto: "La contrición de los pecados",
+      imagen: "../img/doloroso-1.jpg"
+    },
+    {
+      numero: "Segundo Misterio Doloroso",
+      titulo: "La Flagelación del Señor",
+      descripcion: "Contemplamos a Jesús atado a la columna y azotado cruelmente por amor a nosotros.",
+      fruto: "La mortificación de los sentidos",
+      imagen: "../img/doloroso-2.jpg"
+    },
+    {
+      numero: "Tercer Misterio Doloroso",
+      titulo: "La Coronación de Espinas",
+      descripcion: "Contemplamos a Jesús humillado, coronado de espinas y burlado como rey.",
+      fruto: "La humildad",
+      imagen: "../img/doloroso-3.jpg"
+    },
+    {
+      numero: "Cuarto Misterio Doloroso",
+      titulo: "Jesús con la Cruz a Cuestas",
+      descripcion: "Contemplamos a Jesús cargando la cruz camino al Calvario, por amor a la humanidad.",
+      fruto: "La paciencia en las cruces",
+      imagen: "../img/doloroso-4.jpg"
+    },
+    {
+      numero: "Quinto Misterio Doloroso",
+      titulo: "La Crucifixión y Muerte de Jesús",
+      descripcion: "Contemplamos a Jesús muriendo en la cruz para salvarnos del pecado y abrirnos las puertas del cielo.",
+      fruto: "El amor a Jesús y la salvación de las almas",
+      imagen: "../img/doloroso-5.jpg"
+    }
+  ]
+},
 
   luminosos: {
     tituloGeneral: "Misterios Luminosos",
@@ -186,6 +191,7 @@ function mostrarMisterio() {
   const contador = document.getElementById("contadorMisterio");
   const progressBar = document.getElementById("barraProgreso");
   const display = document.getElementById("mysteryDisplay");
+  const imagen = document.getElementById("imagenMisterio");
 
   if (display) {
     display.classList.remove("fade-in");
@@ -198,6 +204,11 @@ function mostrarMisterio() {
   if (descripcion) descripcion.textContent = misterio.descripcion;
   if (fruto) fruto.textContent = "Fruto: " + misterio.fruto;
   if (contador) contador.textContent = `Misterio ${indiceActual + 1} de ${grupo.misterios.length}`;
+
+  if (imagen && misterio.imagen) {
+    imagen.src = misterio.imagen;
+    imagen.alt = misterio.titulo;
+  }
 
   if (progressBar) {
     const porcentaje = ((indiceActual + 1) / grupo.misterios.length) * 100;
